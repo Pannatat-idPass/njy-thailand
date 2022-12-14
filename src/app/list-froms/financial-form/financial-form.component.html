@@ -40,14 +40,22 @@
               <tr>
                 <td>{{data['date']}}</td>
                 <td>{{data['หมวด']}}</td>
-                <td><span *ngIf="data['ประเภท'] == 'รับ'">{{data['price']}}</span></td>
-                <td><span *ngIf="data['ประเภท'] == 'จ่าย'">{{data['price']}}</span></td>
+                <td><span  style="font-size: auto;" *ngIf="data['ประเภท'] == 'รับ'">{{data['price']}}</span></td>
+                <td><span style="font-size: auto;" *ngIf="data['ประเภท'] == 'จ่าย'">{{data['price']}}</span></td>
                 <td></td>
               </tr>
             </tbody>
+            <tbody style="width: 100%;">
+              <tr>
+                <th>รวม</th>
+                <th></th>
+                <th>{{listPrice}}</th>
+                <th>{{listPay}}</th>
+                <th>คงเหลือ {{listPrice - listPay}}</th>
+              </tr>
+            </tbody>
           </table>
-          <div>ผู้ตรวจสอบ
-            .................................................วันที่.................................................</div>
+          <div>ผู้ตรวจสอบ.................................................วันที่.................................................</div>
         </div>
       </div>
   
