@@ -12,7 +12,23 @@ export class CustomerService {
   }
 
   public getSheet(): Promise<any> {
-      var url = "https://script.googleusercontent.com/macros/echo?user_content_key=2MXfDn9hLtoNJSfQxcgCmXiThI3sFaocijFvgcjnPsHRur6TjlhP5VyJXcfBQbxiLaXHZL62B6VSI586YcTYBEAUcEGbxWCPm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMmXEeItSy7W1RXAUIYr-T9yM90A1vLi9-hXtNUakXfUTGmxQWRp4aGLpC2fXTvUwPj3wBZfJBfZ8gzsAFPTwjalhP8dluGinQ&lib=MT9ByW3kDOXYSay5zU0lbXDhu1KL008Ao"
+      var url = `https://script.google.com/macros/s/AKfycby4JwLdqA70li3Vycy6ZzB_ysRR4QNiFxcr7Onxvd9YnczOoivG5OqTyavyFJEqaYhE/exec?q=1`
+      return this.http.get(url).toPromise();
+      }
+
+  public getBP(velue:any,timeDate:any): Promise<any> {
+      var url = `https://script.google.com/macros/s/AKfycbzP6fXCjq9vMqO5UcJ9HwNzYIRCzrOmayFVn9Qpyk2yEwBaIr30R9GbI79Vd9Em8sBISw/exec?n=${velue}&q=${timeDate}`
+      console.log(url);
+      
+      return this.http.get(url).toPromise();
+      }
+
+  public getHistory(velue:any): Promise<any> {
+      var url = `https://script.google.com/macros/s/AKfycby4JwLdqA70li3Vycy6ZzB_ysRR4QNiFxcr7Onxvd9YnczOoivG5OqTyavyFJEqaYhE/exec?q=1&h=${velue}`
+      return this.http.get(url).toPromise();
+      }
+  public getFinancial(velue:any): Promise<any> {
+      var url = `https://script.google.com/macros/s/AKfycbxumio0dr-scl3Ykpim05rH_O_lD3NiUuKBPvB4b2uBlkjA4hz8fenxgJxalC5kF4Z_/exec?time=${velue}`
       return this.http.get(url).toPromise();
       }
 }

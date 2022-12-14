@@ -1,0 +1,77 @@
+<div>
+    <div class="status">
+        <div class="head">
+            <span style="padding: 20px;">สถานะ</span><br>
+        </div>
+        <div style="margin: 15px;font-size: 18px;">
+            <span class="font-white">จำนวน</span> : <span class="font-white">{{listCustomer.length}} เตียง</span>
+        </div>
+    </div>
+
+    <div style="width: 100%;">
+        <div class="row itemsBlock">
+            <div *ngFor="let data of listCustomer; let i = index" class="col-lg-3 col-md-6 col-sm-6 col-12">
+
+                <div class="row container">
+                    <div class="col-md-12 col-12 .col-sm-12 col-lg-12 row" style="margin-left: 0px;padding: 0px;">
+                        <div class="col-md-3 col-3 .col-sm-3 col-lg-3" style="padding: 0px;">
+                            <div class="profile-img"></div>
+                        </div>
+                        <div class="col-md-9 col-9 .col-sm-9 col-lg-9" style="padding: 0px;">
+                            <div class="card-text font-black detail-name">{{data['ชื่อคนไข้']}}</div>
+                            <div class="card-text font-black detail-type">{{data['ประเภท']}}</div>
+                            <div class="card-text font-black detail-station">{{data['สาขา']}}</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-12 .col-sm-12 col-lg-12 row" style="margin-left: 0px;padding: 0px;">
+                        <div class="col-md-6 col-6 .col-sm-6 col-lg-6" style="padding: 0;">
+                            <div class="detail-BP">
+                                <span class="font-small">SYS/DIA/PULSE</span>
+                                <span *ngIf="data['BP']">{{data['BP']}}</span>
+                                <span *ngIf="!data['BP']">--/--/--</span>
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-md-3 col-3 .col-sm-3 col-lg-3" style="padding: 0;"> -->
+                            <!-- <div class="icon-edit" (click)="goProducts(i)">
+                                <img src="assets\icons\icon-details.png" width="38px" height="38px" alt="">
+                            </div> -->
+                        <!-- </div> -->
+
+                        <!-- <div class="dropdown col-md-2 col-2 .col-sm-2 col-lg-2" style="padding: 0;">
+                            <button type="button" class="dropdown-toggle  icon-edit" data-toggle="dropdown">
+                                <img src="assets\icons\icon-details.png" width="38px" height="38px" alt="">
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" (click)="goProducts(i)">บันทึกประจําวันผู้สูผู้งสูอายุ</a>
+                                <a class="dropdown-item" (click)="gohistory(data['ชื่อคนไข้'])">ประวัติผู้สูงอายุ</a>
+                                <a class="dropdown-item" >การเงิน</a>
+                                <a class="dropdown-item" >กำหนดการต่างๆ</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">เกียวข้อง</a>
+                            </div>
+                        </div> -->
+
+                        <div class="btn-group col-md-3 col-3 .col-sm-3 col-lg-3">
+                            <button type="button" class="icon-edit" style="background: none;" data-toggle="dropdown">
+                                <img src="assets\icons\icon-details.png" width="38px" height="38px" alt="">
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" (click)="goProducts(i)">บันทึกประจําวันผู้สูผู้งสูอายุ</a>
+                                <a class="dropdown-item" (click)="gohistory(data['ชื่อคนไข้'])">ประวัติผู้สูงอายุ</a>
+                                <a class="dropdown-item" >การเงิน</a>
+                                <a class="dropdown-item" >กำหนดการต่างๆ</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">เกียวข้อง</a>
+                            </div>
+                          </div>
+                    </div>
+                    <span class="title-1">{{data['สถานะ']}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <p>DASHBOARD</p> -->

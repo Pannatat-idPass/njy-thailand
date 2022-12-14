@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { CustomerService } from 'src/app/service/customer.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-monitor-status',
+  templateUrl: './monitor-status.component.html',
+  styleUrls: ['./monitor-status.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class MonitorStatusComponent implements OnInit {
   listCustomer = []
   listBP = []
   constructor(
@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCustomer()
+
   }
 
   getCustomer() {
@@ -71,5 +72,4 @@ export class DashboardComponent implements OnInit {
       { queryParams: { list: velue } }
     );
   }
-
 }

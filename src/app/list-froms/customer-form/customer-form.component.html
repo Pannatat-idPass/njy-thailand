@@ -1,0 +1,63 @@
+<!-- <div class="box-tool">
+  <h1 style="font-size: 100%;">Print Doucment</h1>
+  <button style="width:200px; height:100px; font-size:120%;" (click)="printDiv('printable');">พิมพ์</button>
+</div> -->
+
+<div class="container center">
+  <div id="printable" class="page">
+    <div class="box-tool">
+      <div class="tool-div">
+        <button class="tool-text" (click)="back()">กลับ</button>
+        <button class="tool-text" (click)="printDiv('printable');">พิมพ์</button>
+  
+        <select #selectMouths class="tool-text" (change)="selectMouth(selectMouths.value)">
+          <option default>---</option>
+          <option *ngFor="let item of mouths;">{{item}}</option>
+        </select>
+  
+        <select #selectYears class="tool-text" (change)="selectYear(selectYears.value)">
+          <option default>---</option>
+          <option *ngFor="let item of Years;">{{item}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="print">
+      <div class="containers" style="text-align: center;">
+        <h3>บันทึกประจําวันผู้สูผู้งสูอายุ</h3>
+        <div class="text2">ชื่อ-นามสกุล <span class="text1">{{productDataFilter['ชื่อคนไข้']}}</span> อายุ <span
+            class="text1">{{productDataFilter['อายุ']}}</span> ปี</div>
+        <table class="table font-1">
+          <thead>
+            <tr>
+              <th>วัน/เดือน/ปี</th>
+              <th>BP <br>(ความดัน)</th>
+              <th>T<br>(อุณอุหภูมิภูมิ)</th>
+              <th>BW<br>(น้ํา หนัก)</th>
+              <th>DTX<br>(น้ําตาล)</th>
+              <th>O2<br>(ออกซิเจน)</th>
+              <th>บันทึกโน้ต</th>
+              <th>ผู้ตรวจ</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let data of listBP; let i = index">
+            <!-- MOCK DATA -->
+            <tr>
+              <td>{{data['date']}}</td>
+              <td>{{data['ความดัน']}}</td>
+              <td>{{data['อุณหภูมิ']}}</td>
+              <td>{{data['น้ำหนัก']}}</td>
+              <td>{{data['น้ำตาล']}}</td>
+              <td>{{data['ออกซิเจน']}}</td>
+              <td>{{data['บันทึกโน้ต']}}</td>
+              <td style="width:150px; overflow: hidden; font-size: 14px;">{{data['ผู้บันทึก']}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div>ผู้ตรวจสอบ
+          .................................................วันที่.................................................</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,38 +1,49 @@
-<div>
-    <div class="status">
-        <div class="head">
-            <span style="padding: 20px;">status</span><br>
-        </div>
-        <div style="margin: 15px;font-size: 18px;">
-            <span class="font-white">number</span> : <span class="font-white">{{listCustomer.length}}</span>
-        </div>
-    </div>
-
-    <div style="margin: 15px;width: 100%;">
-        <div *ngFor="let data of listCustomer;">
-            <div class="card " style="background-color: #e1e1e1; height: 150px; width: 23%;float: left;margin:8px;"
-                *ngIf="data['ชื่อ นามสกุล คนไข้']">
-                <div class="card-body" style="position: relative;">
+<div class="containers">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>ลำดับ</th>
+                <th>รูป</th>
+                <th>เพศ</th>
+                <th>ชื่อ-นามสกุล</th>
+                <th>สาขา</th>
+                <th>สถานะ(BP)</th>
+                <!-- <th>detail</th> -->
+                <th>แบบฟอร์ม</th>
+                <th>สิทธิ</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of listCustomer; let i = index">
+            <tr>
+                <td class="text-center">{{i+1}}</td>
+                <td>
                     <div class="profile-img"></div>
-                    <span class="card-text font-black detail-name">{{data['ชื่อ นามสกุล คนไข้']}}</span>
-                    <span class="card-text font-black detail-type">{{data['ประเภท']}}</span>
-                    <span class="card-text font-black detail-station">{{data['สาขา']}}</span>
-                    <div class="card-text font-black detail-status" *ngIf="data['สถานะ'] === 'เข้าอยู่'">
-                        <span>{{data['สถานะ']}}</span>
+                </td>
+                <td>{{data['เพศ']}}</td>
+                <td>{{data['ชื่อคนไข้']}} <br>({{data['สถานะ']}})</td>
+                <td>{{data['สาขา']}}</td>
+                <!-- <td>{{data['สาขา']}}</td> -->
+                <td *ngIf="data['BP']">{{data['BP']}}</td>
+                <td *ngIf="!data['BP']">--/--/--</td>
+                
+                <td class="btn-group">
+                    <button type="button" class="icon-edit" style="background: none;" data-toggle="dropdown">
+                        <img src="assets\icons\icon-details.png" width="38px" height="38px" alt="">
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" (click)="goProducts(i)">บันทึกประจําวันผู้สูผู้งสูอายุ</a>
+                        <a class="dropdown-item" (click)="gohistory(data['ชื่อคนไข้'])">บันทึกประวัติและประเมินคนไข้ใหม่</a>
+                        <a class="dropdown-item" (click)="gohistory(data['ชื่อคนไข้'])">ประวัติการจ่ายยา</a>
+                        <a class="dropdown-item" (click)="gohistory(data['ชื่อคนไข้'])">ใบรับเข้ายา</a>
+                        <!-- <a class="dropdown-item">การเงิน</a> -->
+                        <a class="dropdown-item">กำหนดการต่างๆ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">เกียวข้อง</a>
                     </div>
-                    <div class="card-text font-black detail-status-fail" *ngIf="data['สถานะ'] === 'ออกแล้ว'" >
-                        <span>{{data['สถานะ']}}</span>
-                    </div>
-                    <div class="detail-BP">
-                        <span>125/70</span>
-                        <span style="margin-left: 20px;">66</span>
-                    </div>
-                    <div class="high-status">
+                </td>
+                <td>{{data['สิทธิ']}}</td>
+            </tr>
+        </tbody>
+    </table>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-<!-- <p>DASHBOARD</p> -->

@@ -1,0 +1,120 @@
+
+thead,
+tr,
+th,
+td,
+tbody {
+    border: 2px solid black;
+}
+
+tbody {
+    font-size: 18px;
+}
+
+thead>tr>th {
+    border-bottom: none;
+}
+
+thead>tr {
+    height: 50px;
+}
+
+tbody>tr>td {
+padding: 0;
+vertical-align:middle;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
+    width: 120px;
+    height: 40px;
+    margin: 15px;
+    border-radius: 5px;
+    // background-color: white;
+}
+
+.box-tool {
+    text-align: center;
+}
+
+.text2 {
+    margin-bottom: 1rem;
+    border: 3px solid black;
+    margin-top: 3rem;
+    padding: 5px;
+}
+.tool-div {
+    padding: 15px;
+    // width: 365px;
+    background: linear-gradient(to right, #daf51c 0%, #fff 100%);
+}
+
+.tool-text {
+    min-width: 120px;
+    height: 40px;
+    margin: 15px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.text1 {
+    // margin-bottom: 1rem;
+    // border: 3px solid black;
+    // margin-top: 3rem;
+    // padding: 5px;
+    font-weight: bold;
+}
+
+.font-1 {
+    font-size: 12px;
+
+}
+
+.page {
+    margin: 0;
+    display: block;
+    // size: A4;
+    margin: 0;
+    width: 210mm;
+    height: 297mm;
+    min-height: 1400px;
+    // padding: 4mm;
+    // border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    // overflow: scroll;
+}
+
+.pageBreak {
+    page-break-after: always;
+}
+
+input {
+    width: 30%;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    thead>tr>th {
+        border: 2px solid black;
+    }
+    .box-tool {
+        display: none;
+        visibility: none;
+    }
+    input {
+        border: none;
+    }
+    .submit {
+        display: none;
+    }
+}

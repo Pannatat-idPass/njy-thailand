@@ -1,0 +1,167 @@
+.status{
+    // width: 100%;
+    background-color: #b1b1b1;    
+    height: 200px;
+    border-radius: 5px;
+    margin: 15px;
+}
+.container{
+    background: #d9d9d9;
+    height: 160px; 
+    margin: 15px 0px;
+    border-radius: 5px;
+}
+.head{
+    background-color: #5d5d5e;
+    height: 50px;
+    font-size: 32px;
+    color: white;
+    border-radius: 5px;
+}
+.font-white{
+    color: white;
+}
+
+.font-black{
+    font-size: 16px;
+    color: black;
+    // position: absolute;
+}
+.card-text{
+    width: 100%;
+    height: 25px;
+    // background: #729d75;
+    overflow: hidden;
+    margin: 5px;
+}
+.detail-name{
+    // position: absolute;
+    // top: 60px;
+    // left: 90px;
+}
+.detail-station{
+    // position: absolute;
+    // top: 2px;
+    // left: 85px;
+}
+.detail-type{
+    // position: absolute;
+    // top: 38px;
+    // left: 88px;
+    // font-size: 14px;
+}
+.detail-hit{
+    position: absolute;
+    top: 38px;
+    left: 88px;
+    font-size: 14px;
+}
+.detail-BP{
+    height: 38px;
+    width: auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;    
+    padding: 8px;
+    margin-left: 7px;
+    font-size: 15px;    
+    position: relative;
+}
+.detail-status{
+    position: absolute;
+    top: -12px;
+    left: -15px;
+    font-size: 13px;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 25px;
+    width: 70px;
+    text-align: center;
+    background-color: #12e112;
+    color: white;
+}
+.detail-status-fail{
+    position: absolute;
+    top: -12px;
+    left: -15px;
+    font-size: 13px;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 25px;
+    width: 70px;
+    text-align: center;
+    background-color: #f03636;
+    color: white;
+}
+.high-status{
+    height: 38px;
+    width: auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-left: 7px;
+}
+.icon-edit{
+    height: 38px;
+    width: 38px;
+    // background-color: #b1c0b5;
+    // color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+.profile-img{
+    height: 60px;
+    width: 60px;
+    background-color: #cdcdcd;
+    border-radius: 50px;
+    border: 2px solid;
+    margin: 10px;}
+
+.card{
+    border: none;
+}
+.print-detail{
+    // position: absolute;
+    height: 30px;
+    width: 50px;
+    background-color: #b1c0b5;
+    color: rgb(0, 0, 0);
+    // top: 107px;
+    // left: 270px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.itemsBlock{
+    margin: 0px;
+}
+
+.font-small{
+    font-size: 12px;
+    position: absolute;
+    top: -17px;
+    left: 3px;
+    font-weight: bolder;
+}
+.title-1{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    width: 80px;
+    text-align: center;
+    border: 2px solid gainsboro;
+}
+
+.close{
+    opacity: 30%;
+
+}
+
+.dropdown-item{
+    cursor: pointer;
+}

@@ -1,2 +1,26 @@
-
-<router-outlet></router-outlet>
+<div class="container-main">
+    <nav class="navbar navbar-expand-sm">
+        <!-- Brand/logo -->
+        <a class="navbar-brand head" href="#">NJY Thailand</a>
+        <span style="color: white;font-size: 65px;margin-bottom: 20px;">|</span>
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/Monitor">หน้าหลัก</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Dashboard">สถานะ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">รายรับ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">รายจ่าย</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Financial">บัญชี</a>
+          </li>
+        </ul>
+      </nav>
+      <router-outlet></router-outlet>
+</div>
