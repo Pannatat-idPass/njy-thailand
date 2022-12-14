@@ -9,7 +9,7 @@ import { CustomerService } from 'src/app/service/customer.service';
 })
 export class FinancialFormComponent implements OnInit {
   listfinancial:any
-  mouths = ['01','02','03','04','05','06','07','08','09','10','11','12']
+  mouths = ['1','2','3','4','5','6','7','8','9','10','11','12']
   Years = ['2563','2564','2565']
   itemMouth:any
   itemYear:any

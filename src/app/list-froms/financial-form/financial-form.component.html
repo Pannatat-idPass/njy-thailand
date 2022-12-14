@@ -39,10 +39,10 @@
             <tbody *ngFor="let data of listfinancial;">
               <tr>
                 <td>{{data['date']}}</td>
-                <td>{{data['ประเภท']}}</td>
-                <td><span *ngIf="data['ประเภท'] == 'จ่าย'">{{data['price']}}</span></td>
-                <td><span *ngIf="data['ประเภท'] == 'รับ'">{{data['price']}}</span></td>
                 <td>{{data['หมวด']}}</td>
+                <td><span *ngIf="data['ประเภท'] == 'รับ'">{{data['price']}}</span></td>
+                <td><span *ngIf="data['ประเภท'] == 'จ่าย'">{{data['price']}}</span></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
