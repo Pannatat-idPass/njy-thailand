@@ -12,6 +12,7 @@ import { MonitorStatusComponent } from './container/monitor-status/monitor-statu
 import { ReactiveFormsModule } from '@angular/forms';
 import { FinancialStatusComponent } from './container/financial-status/financial-status.component';
 import { FinancialFormComponent } from './list-froms/financial-form/financial-form.component';
+import { FinancialbankFormComponent } from './list-froms/financialbank-form/financialbank-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FinancialFormComponent } from './list-froms/financial-form/financial-fo
     HistoryFromComponent,
     MonitorStatusComponent,
     FinancialStatusComponent,
-    FinancialFormComponent
+    FinancialFormComponent,
+    FinancialbankFormComponent
   ],
   imports: [
     BrowserModule,

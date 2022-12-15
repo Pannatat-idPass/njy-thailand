@@ -23,8 +23,8 @@ export class CustomerService {
       return this.http.get(url).toPromise();
       }
 
-  public getHistory(velue:any): Promise<any> {
-      var url = `https://script.google.com/macros/s/AKfycby4JwLdqA70li3Vycy6ZzB_ysRR4QNiFxcr7Onxvd9YnczOoivG5OqTyavyFJEqaYhE/exec?q=1&h=${velue}`
+  public getHistory(Name:any): Promise<any> {
+      var url = `https://script.google.com/macros/s/AKfycby4JwLdqA70li3Vycy6ZzB_ysRR4QNiFxcr7Onxvd9YnczOoivG5OqTyavyFJEqaYhE/exec?q=1&h=${Name}`
       return this.http.get(url).toPromise();
       }
   public getFinancial(velue:any): Promise<any> {

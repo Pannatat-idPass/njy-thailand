@@ -3,11 +3,11 @@ import { Location } from '@angular/common'
 import { CustomerService } from 'src/app/service/customer.service';
 
 @Component({
-  selector: 'app-financial-form',
-  templateUrl: './financial-form.component.html',
-  styleUrls: ['./financial-form.component.scss']
+  selector: 'app-financialbank-form',
+  templateUrl: './financialbank-form.component.html',
+  styleUrls: ['./financialbank-form.component.scss']
 })
-export class FinancialFormComponent implements OnInit {
+export class FinancialbankFormComponent implements OnInit {
   listfinancial = []
   dataFinancial = []
   listLocations = []
@@ -18,10 +18,10 @@ export class FinancialFormComponent implements OnInit {
   Years = ['2564', '2565']
   itemMouth: any
   itemYear: any
-
   constructor(
     private location: Location,
     private customer: CustomerService
+
   ) { }
 
   ngOnInit(): void {

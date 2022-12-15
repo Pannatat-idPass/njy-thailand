@@ -1,14 +1,9 @@
-<!-- <div class="box-tool">
-  <h1 style="font-size: 100%;">Print Doucment</h1>
-  <button style="width:200px; height:100px; font-size:120%;" (click)="printDiv('printable');">พิมพ์</button>
-</div> -->
-
 <div class="center" style="background: white;">
     <div id="printable" class="page">
       <div class="box-tool">
         <div class="tool-div">
           <button class="tool-text" (click)="back()">กลับ</button>
-          <button class="tool-text" (click)="printDiv('printable');">พิมพ์</button>
+          <button class="tool-text" (click)="printDiv('printable');">พิมพ์</button><br>
     
           <select #selectMouths class="tool-text" (change)="selectMouth(selectMouths.value)">
             <option default>---</option>
@@ -19,11 +14,16 @@
             <option default>---</option>
             <option *ngFor="let item of Years;">{{item}}</option>
           </select>
+
+          <select #selectLocation class="tool-text" (change)="selectLocations(selectLocation.value)">
+            <option default>---</option>
+            <option *ngFor="let item of listLocations;">{{item}}</option>
+          </select>
         </div>
       </div>
       <div class="print">
         <div class="containers" style="text-align: center;">
-          <h3>รายงานกำไรขาดทุน ฟูลฟล ลิฟวิ่ง</h3>
+          <h3>รายงานกำไรขาดทุน {{selectLocation.value || "รายได้รวมทุกสาขา"}}</h3>
           <!-- <div class="text2">ชื่อ-นามสกุล <span class="text1">{{productDataFilter['ชื่อคนไข้']}}</span> อายุ <span
               class="text1">{{productDataFilter['อายุ']}}</span> ปี</div> -->
           <table class="table font-1">
@@ -36,7 +36,7 @@
                 <th>หมายเหตุ</th>
               </tr>
             </thead>
-            <tbody *ngFor="let data of listfinancial;">
+            <tbody *ngFor="let data of dataFinancial;">
               <tr>
                 <td>{{data['date']}}</td>
                 <td>{{data['หมวด']}}</td>
