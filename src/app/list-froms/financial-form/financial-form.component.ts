@@ -35,7 +35,7 @@ export class FinancialFormComponent implements OnInit {
         if (this.listLocations.indexOf(financial['สาขา']) <= -1) {
           this.listLocations.push(financial['สาขา'])
         }
-        if (!this.locationName || this.locationName == '---') {
+        if (!this.locationName || this.locationName == 'สาขาทั้งหมด') {
           this.dataFinancial.push(financial)
           if (financial['ประเภท'] == 'รับ') {
             this.listPrice = this.listPrice + (parseInt(financial['price']) || 0)

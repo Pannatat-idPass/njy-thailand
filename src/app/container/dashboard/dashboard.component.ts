@@ -25,13 +25,14 @@ export class DashboardComponent implements OnInit {
     this.customer.getSheet().then((res) => {
       this.listCustomer = res.user
       console.log('getSheet', this.listCustomer);
-      this.customer.getBP('','').then((res) => {
+      this.customer.getBP('','All').then((res) => {
         this.listBP = res.user
         console.log('getBP', this.listBP);
         let Customer = this.listCustomer
         if (Customer) {
           Customer.forEach((data, index) => {
             this.listBP.forEach((res) => {
+              console.log('res new',res);
               if (data['ชื่อคนไข้'] == res['ชื่อคนไข้']) {
                 if (res['ความดัน'] !== ' / /') {
                   this.listCustomer[index]['BP'] = res['ความดัน'] || '--/--/--'
@@ -72,4 +73,10 @@ export class DashboardComponent implements OnInit {
     );
   }
 
+  goADL(velue: any) {
+    this.router.navigate(
+      ['/ADL'],
+      { queryParams: { list: velue } }
+    );
+  }
 }

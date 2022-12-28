@@ -72,4 +72,11 @@ export class MonitorStatusComponent implements OnInit {
       { queryParams: { list: velue } }
     );
   }
+
+  goADL(velue: any) {
+    this.router.navigate(
+      ['/ADL'],
+      { queryParams: { list: velue } }
+    );
+  }
 }

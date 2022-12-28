@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FinancialStatusComponent } from './container/financial-status/financial-status.component';
 import { FinancialFormComponent } from './list-froms/financial-form/financial-form.component';
 import { FinancialbankFormComponent } from './list-froms/financialbank-form/financialbank-form.component';
+import { AdlFormComponent } from './list-froms/adl-form/adl-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FinancialbankFormComponent } from './list-froms/financialbank-form/fina
     MonitorStatusComponent,
     FinancialStatusComponent,
     FinancialFormComponent,
-    FinancialbankFormComponent
+    FinancialbankFormComponent,
+    AdlFormComponent
   ],
   imports: [
     BrowserModule,

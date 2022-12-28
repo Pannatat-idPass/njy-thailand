@@ -16,17 +16,20 @@
           </select>
 
           <select #selectLocation class="tool-text" (change)="selectLocations(selectLocation.value)">
-            <option default>---</option>
+            <option default>สาขาทั้งหมด</option>
             <option *ngFor="let item of listLocations;">{{item}}</option>
           </select>
         </div>
       </div>
       <div class="print">
-        <div class="containers" style="text-align: center;">
-          <h3>รายงานกำไรขาดทุน {{selectLocation.value || "รายได้รวมทุกสาขา"}}</h3>
-          <!-- <div class="text2">ชื่อ-นามสกุล <span class="text1">{{productDataFilter['ชื่อคนไข้']}}</span> อายุ <span
-              class="text1">{{productDataFilter['อายุ']}}</span> ปี</div> -->
-          <table class="table font-1">
+        <!-- <div class="containers"> -->
+          <div style="height: 50px;"></div>
+              <h2 style="text-align: center;">รายงานกำไรขาดทุน {{selectLocation.value || "สาขาทั้งหมด"}}</h2>
+          <table class="table font-1" style="margin-top: 50px;">
+            <tfoot>
+              <tr>
+              </tr>
+            </tfoot>
             <thead>
               <tr>
                 <th>วัน/เดือน/ปี</th>
@@ -54,9 +57,18 @@
                 <th>คงเหลือ {{listPrice - listPay}}</th>
               </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <!-- <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th> -->
+              </tr>
+            </tfoot>
           </table>
-          <div>ผู้ตรวจสอบ.................................................วันที่.................................................</div>
-        </div>
+          <!-- <div>ผู้ตรวจสอบ.................................................วันที่.................................................</div> -->
+        <!-- </div> -->
       </div>
   
     </div>
